@@ -52,12 +52,9 @@ const UserPage: React.FC<
       setForkCount(forks);
 
       // Find the latest update time among all repositories
-      const latestUpdateTime = repositories.reduce(
-        (latest: string, repo: any) => {
-          return repo.updated_at > latest ? repo.updated_at : latest;
-        },
-        ""
-      );
+      const latestUpdateTime = repositories.reduce((latest: string, repo: any) => {
+        return repo.updated_at > latest ? repo.updated_at : latest;
+      }, "");
       setLatestUpdate(latestUpdateTime);
     } catch (error) {
       console.error("Error fetching repositories:", error);

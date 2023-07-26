@@ -36,3 +36,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Description about the way of doing the task:
+
+1. first we created two interfaces in the folder types called user and repository, for typescript errors and ...
+2. then we head back to pages folder and create a route called [username].tsx for dynamice search for users , we used useState react hooks for tracking props like forking and stars and ...
+ and useEffect for useing fetched data's from api. api's were fetched with axios, and data's were sorted there with es6 arrow functions. then we used those functions in JSX.
+3. Create new folder named "components" inside src directory which will contain all reusable components like. we create userProfile.tsx for each users wrapper template.
+repositoryList.tsx for useing it for most popular user's section (a template with map function that will apply elements for each prop). and also a searchInput component that uses react useState hook for tracking the input text and then grab it and then filter it for searching in the most popular file.
+4. in the most popular route we use the hook useState for tracking the repository array for pushing popular account inside it, then with useEffect we run the function that we fetched the api with it useing axios, for creating a sideEffect to use it for sorting and filtering by 10. and in the last part we put our components inside JSX to use them as a template.
+5. in the last part we changed the index.tsx for output and completing the task...
+
+Hope it's okay and acceptable :)
